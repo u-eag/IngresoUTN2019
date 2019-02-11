@@ -4,10 +4,9 @@ function Mostrar()
 {
 	var nombre;
 
-    nombre =  document.getElementById("elNombre").value;
+    nombre = document.getElementById("elNombre").value;
 
-    alert(nombre);
-
+    alert("Su nombre es " + nombre);
 }
 
 

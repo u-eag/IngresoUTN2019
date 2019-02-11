@@ -18,7 +18,7 @@
 4.
 	var nombre;
 
-	nombre = prompt("Ingresá tu nombre");
+	nombre = prompt("Ingrese su nombre");
 
 	document.getElementById("elNombre").value = nombre;
 
@@ -120,15 +120,30 @@ function dividir()
 
 9.
     var sueldo;
+    var aumento;
+    var resultado;
     
     sueldo = parseInt(document.getElementById("sueldo").value);
 
-    document.getElementById("resultado").value = sueldo * 1.1;
+    aumento = sueldo * 0.1;
+
+    resultado = sueldo + aumento;
+
+    document.getElementById("resultado").value = resultado;
+
+    alert("El aumento es de " + aumento + " pesos");
 
 10.
     var importe;
+    var descuento;
+    var resultado;
 
     importe = parseInt(document.getElementById("importe").value);
 
-    document.getElementById("resultado").value = importe * 0.75;
+    descuento = importe * 0.25;
 
+    resultado = importe - descuento;
+
+    document.getElementById("resultado").value = resultado;
+
+    alert("El descuento es de " + descuento + " pesos");

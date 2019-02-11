@@ -9,7 +9,5 @@ function Mostrar()
 	nombre = prompt("Ingrese su nombre");
 
 	document.getElementById("elNombre").value = nombre;
-
-
 }
 
