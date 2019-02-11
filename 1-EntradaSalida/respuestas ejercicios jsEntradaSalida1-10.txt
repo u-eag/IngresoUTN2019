@@ -138,7 +138,7 @@ function dividir()
     var descuento;
     var resultado;
 
-    importe = parseInt(document.getElementById("importe").value);
+    importe = parseFloat(document.getElementById("importe").value);
 
     descuento = importe * 0.25;
 
@@ -146,4 +146,4 @@ function dividir()
 
     document.getElementById("resultado").value = resultado;
 
-    alert("El descuento es de " + descuento + " pesos");
+    alert("El descuento es de $" + descuento.toFixed(2);
