@@ -1,0 +1,60 @@
+1.
+// las llaves se escriben con alt+123
+
+{
+    var edad;
+
+    edad = parseInt(document.getElementById("edad").value);
+
+    if ( edad == 15)
+    {
+        alert("niña bonita");
+    }
+
+    alert("fin de la función");
+
+2.
+// el simbolo mayor se escribe con alt+62
+// el simbolo menor se escribe con alt+60
+
+function Mostrar()
+{ 
+    var edad;
+
+    edad = parseInt(document.getElementById("edad").value);
+
+    if( edad >= 18 )
+    {
+        alert("Es mayor de edad");
+    }
+}
+
+3.
+function Mostrar()
+{
+    var edad;
+
+    edad = parseInt(document.getElementById("edad").value);
+
+    if ( edad < 18)
+    {
+        alert("Es menor de edad");
+    }
+    else
+    {
+        alert("Es mayor de edad");
+    }
+}
+
+4.
+function Mostrar()
+{
+    var edad;
+
+    edad = parseInt(document.getElementById("edad").value);
+
+    if ( edad >= 13 && edad <= 17 )
+    {
+        alert("Es adolescente");
+    }
+}
