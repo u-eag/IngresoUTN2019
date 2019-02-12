@@ -1,0 +1,139 @@
+1. FerreteFacturacion
+
+function Sumar () 
+{
+    var num1;
+    var num2;
+    var num3;
+    
+    var resultado;
+
+    num1 = parseFloat(document.getElementById("PrecioUno").value);
+    num2 = parseFloat(document.getElementById("PrecioDos").value);
+    num3 = parseFloat(document.getElementById("PrecioTres").value);
+
+    resultado = num1 + num2 + num3;
+
+    alert("La suma es " + resultado.toFixed(2));
+}
+function Promedio () 
+{
+    var num1;
+    var num2;
+    var num3;
+
+    var resultado;
+
+    num1 = parseFloat(document.getElementById("PrecioUno").value);
+    num2 = parseFloat(document.getElementById("PrecioDos").value);
+    num3 = parseFloat(document.getElementById("PrecioTres").value);
+
+    resultado = (num1 + num2 + num3) / 3
+
+    alert("El promedio es " + resultado.toFixed(2));
+}
+function PrecioFinal () 
+{
+    var num1;
+    var num2;
+    var num3;
+
+    var iva;
+    var resultado;
+
+    num1 = parseFloat(document.getElementById("PrecioUno").value);
+    num2 = parseFloat(document.getElementById("PrecioDos").value);
+    num3 = parseFloat(document.getElementById("PrecioTres").value);
+
+    iva = (num1 + num2 + num3) * 0.21;
+
+    resultado = num1 + num2 + num3 + iva;
+
+    alert("El precio final con IVA (21%) es $" + resultado.toFixed(2)); 
+
+2. FerreteConstruccion
+
+function Rectangulo () 
+{
+    var largo;
+    var ancho;
+    
+    var perimetro;
+    var alambre;
+    
+    largo = parseFloat(document.getElementById("Largo").value);
+    ancho = parseFloat(document.getElementById("Ancho").value);
+
+    perimetro = (largo + ancho) *2;
+    alambre = perimetro * 3;
+
+    alert("La cantidad de alambre a comprar es " + alambre.toFixed(2) + " metros");
+}
+function Circulo () 
+{
+    var radio;
+    var perimetro;
+    var alambre;
+
+    radio = parseFloat(document.getElementById("Radio").value);
+    
+    perimetro = 2 * Math.PI * radio;
+
+    alambre = perimetro * 3;
+
+    alert("La cantidad de alambre a comprar es " + alambre.toFixed(2) + " metros");
+}
+function Materiales () 
+{
+    var largo;
+    var ancho;
+
+    var superficie;
+
+    var cemento;
+    var cal;
+    
+    largo = parseFloat(document.getElementById("Largo").value);
+    ancho = parseFloat(document.getElementById("Ancho").value);
+
+    superficie = largo * ancho;
+
+    cemento = superficie * 2
+    cal = superficie * 3
+
+    alert("Para hacer un contrapiso de " + superficie + " m2, se necesitan " + cemento + " bolsas de cemento y " + cal + " bolsas de cal");
+}
+
+3. FerretePinturas
+
+// la formula para convertir 32 f a c es "(32 F - 32) × 5/9 = 0 C"
+
+// la formula para convertir 0 c a 32f es "(0 C × 9/5) + 32 = 32 F"
+
+function FahrenheitCentigrados () 
+{
+    // (32 F - 32) × 5/9 = 0 C
+
+    var fahrenheit;
+    var centigrados;
+
+    fahrenheit = parseFloat(document.getElementById("Temperatura").value);
+
+    centigrados = (fahrenheit - 32) * 5/9;
+
+    alert(fahrenheit + " Fahrenheit son " + centigrados + " Centígrados");
+}
+
+function CentigradosFahrenheit () 
+{
+    // (0 C × 9/5) + 32 = 32 F
+    
+    var centigrados;
+    var fahrenheit;
+
+    centigrados = parseFloat(document.getElementById("Temperatura").value);
+
+    fahrenheit = (centigrados * 9/5) + 32;
+
+    alert(centigrados + " grados Centígrados son " + fahrenheit + " Fahrenheit");	
+}
