@@ -8,10 +8,10 @@
 
     if ( edad == 15)
     {
-        alert("niña bonita");
+        alert("niï¿½a bonita");
     }
 
-    alert("fin de la función");
+    alert("fin de la funciï¿½n");
 
 2.
 // el simbolo mayor se escribe con alt+62
@@ -58,3 +58,62 @@ function Mostrar()
         alert("Es adolescente");
     }
 }
+
+5.
+    var edad;
+
+    edad = parseInt(document.getElementById("edad").value);
+
+    if ( edad < 13 || edad > 17)
+    {
+        alert("No es adolescente");
+    }
+
+6.
+    var edad;
+
+    edad = parseInt(document.getElementById("edad").value);
+
+    if ( edad >= 18)
+    {
+        alert("Es mayor de edad");
+    }
+    else
+    {
+        if ( edad < 13)
+        {
+            alert("Es niÃ±o");
+        }
+        else
+        {
+            alert("Es adolescente");
+        }
+    }
+
+7.
+    var edad;
+    var estadoCivil;
+    
+    edad = parseInt(document.getElementById("edad").value);
+    
+    estadoCivil = document.getElementById("estadoCivil").value;
+
+    if ( edad < 18 && (estadoCivil == "Casado" || estadoCivil == "Divorciado"))
+    {
+        alert("Es muy pequeÃ±o para NO ser soltero");
+    }
+
+8.
+    var edad;
+    var estadoCivil;
+
+    edad = parseInt(document.getElementById("edad").value);
+
+    estadoCivil = document.getElementById("estadoCivil").value;
+
+    if ( edad >= 18 && estadoCivil == "Soltero")
+    {
+        alert("Es soltero y no es menor");
+    }
+
+9.
