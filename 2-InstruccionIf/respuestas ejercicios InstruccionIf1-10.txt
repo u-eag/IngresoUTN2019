@@ -1,24 +1,21 @@
 ﻿1.
 // las llaves se escriben con alt+123
 
-{
     var edad;
 
     edad = parseInt(document.getElementById("edad").value);
 
     if ( edad == 15)
     {
-        alert("ni�a bonita");
+        alert("niña bonita");
     }
 
-    alert("fin de la funci�n");
+    alert("fin de la funcion");
 
 2.
-// el simbolo mayor se escribe con alt+62
 // el simbolo menor se escribe con alt+60
+// el simbolo mayor se escribe con alt+62
 
-function Mostrar()
-{ 
     var edad;
 
     edad = parseInt(document.getElementById("edad").value);
@@ -27,27 +24,22 @@ function Mostrar()
     {
         alert("Es mayor de edad");
     }
-}
 
 3.
-function Mostrar()
-{
     var edad;
 
     edad = parseInt(document.getElementById("edad").value);
 
-    if ( edad < 18)
-    {
-        alert("Es menor de edad");
-    }
-    else
+    if ( edad >= 18)
     {
         alert("Es mayor de edad");
     }
-}
+    else
+    {
+        alert("Es menor de edad");
+    }
 
 4.
-
     var edad;
 
     edad = parseInt(document.getElementById("edad").value);
@@ -57,63 +49,49 @@ function Mostrar()
         alert("Es adolescente");
     }
 
-    /* if ( !(edad < 13 || edad > 17))
-    {
-        alert("Es adolescente");
-    }
- */
-    
-
 5.
+// el simbolo pipe se escribe con altGr+1
+
     var edad;
 
     edad = parseInt(document.getElementById("edad").value);
 
-    if ( edad < 13 || edad > 17)
+    if ( !(edad >= 13 && edad <= 17))
     {
-        alert("No es adolescente");
+        alert("La persona NO es adolescente");
     }
-
-    /* if ( !(edad >= 13 && edad <= 17))
-    {
-        alert("NO es adolescente");
-    } */
 
 6.
+
     var edad;
 
     edad = parseInt(document.getElementById("edad").value);
 
-    if ( edad >= 18)
-    {
-        alert("Es adulto");
-    }
-    else if ( edad >= 13)
+    if ( edad >= 13 && edad <= 17)
     {
         alert("Es adolescente");
+    }
+    else if ( edad < 13)
+    {
+        alert("Es niño");
     }
     else
     {
-        alert("Es niño");
+        alert("Es adulto");
     }
 
 7.
     var edad;
     var estadoCivil;
-    
+
     edad = parseInt(document.getElementById("edad").value);
-    
+
     estadoCivil = document.getElementById("estadoCivil").value;
 
-    if ( edad < 18 && (estadoCivil == "Casado" || estadoCivil == "Divorciado"))
+    if ( edad < 18 && estadoCivil != "Soltero")
     {
         alert("Es muy pequeño para NO ser soltero");
     }
-
-    /* if ( edad < 18 && estadoCivil != "Soltero")
-    {
-        alert("Es muy pequeño para NO ser soltero");
-    } */
 
 8.
     var edad;
@@ -129,18 +107,18 @@ function Mostrar()
     }
 
 9.
+// no va en el examen
 
 	var num;
 
-	num = Math.floor(Math.random(1-10) * ((10 + 1) - 1) + 1);
+	num = Math.floor(Math.random() * ((10 + 1) - 1) + 1);
 
 	alert(num);
 
 10.
-
 	var nota;
 
-	nota = Math.floor(Math.random(1-10) * ((10 + 1) - 1) + 1);
+	nota = Math.floor(Math.random() * ((10 + 1) - 1) + 1);
 
 	alert(nota);
 
@@ -154,68 +132,5 @@ function Mostrar()
 	}
 	else
 	{
-		
-
-
-Examen
-
-1-
-
-var base;
-var perimetro;
-
-base = parseFloat(document.getElementById("base").value);
-
-perimetro = base * 4
-
-alert("El perímetro es " + perimetro + " metros");
-
-2-
-
-var importe;
-var iva;
-var importeFinal;
-
-importe = prompt("Ingrese el importe");
-
-iva = importe * 0.21;
-
-importeFinal = importe + iva;
-
-alert("El importe final es $" + importeFinal.t);
-
-3-
-
-var largo;
-var ancho;
-var perimetro;
-var alambre;
-
-largo = parseFloat(document.getElementById("largo").value);
-
-ancho = parseFloat(document.getElementById("ancho").value);
-
-perimetro = (largo + ancho) * 2;
-
-alambre = perimetro * 3
-
-alert("Se necesitan " + perimetro + " de alambre para colocarle 3 hilos de alambrado a su perimetro");
-
-4-
-
-var num1;
-var num2;
-
-
-num1 = parseInt(prompt("Ingrese el primer número"));
-
-num2 = parseInt(prompt("Ingrese el segundo número"));
-
-if ( num1 == num2)
-{
-alert
-} 
-
-
-
-
+		alert("EXCELENTE");
+	}
