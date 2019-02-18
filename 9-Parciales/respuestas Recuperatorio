@@ -1,0 +1,72 @@
+1-
+
+var base;
+
+var superficie;
+
+base = parseFloat(document.getElementById("base").value);
+
+superficie = base * 4;
+
+alert("La superficie es " + superficie + " metros");
+
+2-
+
+var importe;
+
+var descuento;
+// el descuento es del 25%
+
+var precioFinal;
+
+importe = prompt("Ingrese el importe);
+
+descuento = importe * 0.25;
+
+alert("El importe final es $" + precioFinal.toFixed(2));
+
+3-
+
+var precio1;
+var precio2;
+var precio3;
+
+var suma;
+var promedio;
+
+precio1 = parseFloat(document.getElementById("precioUno").value);
+precio2 = parseFloat(document.getElementById("precioDos").value);
+precio3 = parseFloat(document.getElementById("precioTres").value;
+
+suma = precio1 + precio2 + precio3;
+
+promedio = suma / 3;
+
+alert("La suma de los precios es $" + suma + " y el promedio es $" + promedio);
+
+4-
+
+var num1;
+var num2;
+
+var suma;
+
+num1 = parseFloat(prompt("Ingrese el primer número"));
+num2 = parseFloat(prompt("Ingrese el segundo número"));
+
+suma = num1 + num2;
+
+if ( suma == 0)
+{
+"El resultado de la suma es cero" = document.write;
+}
+if else ( suma > 0)
+{
+"El resultado de la suma es positivo" = document.write;
+}
+else
+{
+"El resultado de la suma es negativo" = document.write;
+}
+    
+
