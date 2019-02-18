@@ -140,10 +140,13 @@ function CentigradosFahrenheit ()
 
 4. FerreteIluminacion
 
-    var cantidad;
+ 	var cantidad;
     var marca;
 // las marcas son: ArgentinaLuz, FelipeLamparas, JeLuz, HazIluminacion y Osram.
     var precio = 35;
+
+    var precioDescuento;
+// mostrar el precio de una lámpara en la caja de texto id = precioDescuento
     
     var precio50off = precio * 0.5;
     var precio40off = precio * 0.6;
@@ -155,53 +158,88 @@ function CentigradosFahrenheit ()
     var precio5off = precio * 0.95;
 
     var importeFinal;
-// id = precioDescuento
+
     var iibb;
+
+    var mensaje;
+
+    var flag = false;
 
     cantidad = parseInt(document.getElementById("Cantidad").value);
 
     marca = document.getElementById("Marca").value;
 
-    if ( cantidad >= 6)
+    if (cantidad >= 6)
     {
-        importeFinal = cantidad * precio50off;
+        precioDescuento = precio50off;
+        // poner el precio con descuento en cada bloque (en lugar del importeFinal)
     }
-    else if ( cantidad == 5 && marca == "ArgentinaLuz")
+    else if (cantidad == 5)
     {
-        importeFinal = cantidad * precio40off;
+        if (marca == "ArgentinaLuz")
+        {
+            precioDescuento = precio40off;
+        }
+        else
+        {
+            precioDescuento = precio30off;
+        }
     }
-    else if ( cantidad == 5 && marca != "ArgentinaLuz")
+    else if (cantidad == 4)
     {
-        importeFinal = cantidad * precio30off;
+        if (marca == "ArgentinaLuz" || marca == "FelipeLamparas")
+        {
+            precioDescuento = precio25off;
+        }
+        else
+        {
+            precioDescuento = precio20off;
+        }
     }
-    else if ( cantidad == 4 && (marca == "ArgentinaLuz" || marca == "FelipeLamparas"))
+    else if (cantidad == 3)
     {
-        importeFinal = cantidad * precio25off;
+        if (marca == "ArgentinaLuz")
+        {
+        precioDescuento = precio15off;
+        }
+        else if (marca == "FelipeLamparas")
+        {
+        precioDescuento = precio10off;
+        }
+        else
+        {
+        precioDescuento = precio5off;
+        }
     }
-    else if ( cantidad == 4 && !(marca == "ArgentinaLuz" || marca == "FelipeLamparas"))
+    else if (cantidad > 0)
     {
-        importeFinal = cantidad * precio20off;
+        precioDescuento = precio;
     }
-    else if ( cantidad == 3 && marca == "ArgentinaLuz")
+    else
     {
-        importeFinal = cantidad * precio15off;
-    }
-    else if ( cantidad == 3 && marca == "FelipeLamparas")
-    {
-        importeFinal = cantidad * precio10off;
-    }
-    else if ( cantidad == 3 && !(marca == "ArgentinaLuz" || marca == "FelipeLamparas"))
-    {
-        importeFinal = cantidad * precio5off;
+        alert("Cantidad no válida");
     }
     
-    if ( importeFinal > 120)
+    document.getElementById("precioDescuento").value = precioDescuento.toFixed(2);
+
+    importeFinal = cantidad * precioDescuento;
+
+    if (importeFinal > 120)
     {
         iibb = importeFinal * 0.1;
 
         importeFinal = importeFinal + iibb;
 
-        alert("IIBB Usted pagó $" + iibb);
+        flag = true;
     }
 
-    document.getElementById("precioDescuento").value = importeFinal.toFixed(2);
+    mensaje = "Importe final $" + importeFinal.toFixed(2);
+
+    if (flag)
+    {
+        mensaje = mensaje + " IIBB usted pagó $" + iibb.toFixed(2);
+    }
+
+    alert(mensaje);
+
+
