@@ -16,11 +16,11 @@
     alert("Su nombre es " + nombre);
 
 4.
-	var nombre;
+    var nombre;
 
-	nombre = prompt("Ingrese su nombre");
+    nombre = prompt("Ingrese su nombre");
 
-	document.getElementById("elNombre").value = nombre;
+    document.getElementById("elNombre").value = nombre;
 
 5.
     var nombre;
@@ -29,7 +29,7 @@
     nombre = document.getElementById("elNombre").value;
     edad = document.getElementById("laEdad").value;
 
-    alert("Usted se llama " + nombre + " y tiene " + edad + " años");
+    alert("Usted se llama " + nombre + " y tiene " + edad + " aÃ±os");
 	
 6.
     var num1;
@@ -87,7 +87,7 @@ function multiplicar()
 
     multi = num1 * num2;
 
-    alert("La multiplicación es " + multi);
+    alert("La multiplicaciÃ³n es " + multi);
 }
 
 function dividir()
@@ -102,7 +102,7 @@ function dividir()
 
     division = num1 / num2;
 
-    alert("La división es " + division);
+    alert("La divisiÃ³n es " + division);
 }
 
 8.
