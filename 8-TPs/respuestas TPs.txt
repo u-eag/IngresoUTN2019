@@ -327,10 +327,10 @@ function CentigradosFahrenheit ()
         flag = true;
     }
 
-    mensaje = "El importe final es $" + importeFinal;
+    mensaje = "El importe final es $" + importeFinal.toFixed(2);
 
     if (flag) {
-        mensaje = mensaje + " IIBB Usted pagó $" + IIBB;
+        mensaje = mensaje + " IIBB Usted pagó $" + IIBB.toFixed(2);
     }
 
     alert(mensaje);
