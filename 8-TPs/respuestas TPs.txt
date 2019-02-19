@@ -242,4 +242,98 @@ function CentigradosFahrenheit ()
 
     alert(mensaje);
 
+4. versión switch
+
+    var cantidad;
+    // id = "Cantidad"
+    var marca;
+    // id = "Marca" : ArgentinaLuz, FelipeLamparas, JeLuz, HazIluminacion y Osram.
+    var precio = 35;
+
+    var precio50off = precio * 0.5;
+    var precio40off = precio * 0.6;
+    var precio30off = precio * 0.7;
+    var precio25off = precio * 0.75;
+    var precio20off = precio * 0.8;
+    var precio15off = precio * 0.85;
+    var precio10off = precio * 0.9;
+    var precio5off = precio * 0.95;
+
+    var precioDescuento;
+    // poner en la caja de texto id = "precioDescuento" el precio de una lámpara con el descuento correpospondiente a la cantidad
+
+    var importeFinal;
+
+    var IIBB;
+
+    var mensaje;
+    // mostrar por alert el importeFinal y si pagó IIBB indicarlo por separado (todo en un mismo alert)
+
+    var flag = false;
+    // para registrar si corresponde sumar el importe de IIBB al mensaje
+
+    cantidad = parseInt(document.getElementById("Cantidad").value);
+
+    marca = document.getElementById("Marca").value;
+
+    if (cantidad > 0) {
+        switch (cantidad) {
+            case 1:
+            case 2:
+                precioDescuento = precio;
+                break;
+            case 3:
+                if (marca == "ArgentinaLuz") {
+                    precioDescuento = precio15off;
+                }
+                else if (marca == "FelipeLamparas") {
+                    precioDescuento = precio10off;
+                }
+                else {
+                    precioDescuento = precio5off;
+                }
+                break;
+            case 4:
+                if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
+                    precioDescuento = precio25off;
+                }
+                else {
+                    precioDescuento = precio20off;
+                }
+                break;
+            case 5:
+                if (marca == "ArgentinaLuz") {
+                    precioDescuento = precio40off;
+                }
+                else {
+                    precioDescuento = precio30off;
+                }
+                break;
+            default:
+                precioDescuento = precio50off;
+        }
+    }
+    else {
+        alert("La cantidad ingresada no es válida");
+    }
+
+    document.getElementById("precioDescuento").value = precioDescuento.toFixed(2);
+
+    importeFinal = cantidad * precioDescuento;
+
+    if (importeFinal > 120) {
+        IIBB = importeFinal * 0.1;
+        importeFinal = importeFinal + IIBB;
+        flag = true;
+    }
+
+    mensaje = "El importe final es $" + importeFinal;
+
+    if (flag) {
+        mensaje = mensaje + " IIBB Usted pagó $" + IIBB;
+    }
+
+    alert(mensaje);
+
+
 
