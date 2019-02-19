@@ -116,21 +116,24 @@
 	alert(num);
 
 10.
-	var nota;
+	var nota = Math.floor(Math.random() * ((10 + 1) - 1) + 1);
 
-	nota = Math.floor(Math.random() * ((10 + 1) - 1) + 1);
-
-	alert(nota);
+	mensaje = "Su nota es " + nota;
 
 	if ( nota < 4)
 	{
-		alert("Vamos, la próxima se puede");
+		mensaje = mensaje + " Vamos, la próxima se puede";
 	}
-	else if ( nota < 9)
+	else 
 	{
-		alert("APROBÓ");
+		if ( nota < 9)
+		{
+			mensaje = mensaje + " APROBÓ";
+		}
+		else
+		{
+			mensaje = mensaje + " EXCELENTE";
+		}
 	}
-	else
-	{
-		alert("EXCELENTE");
-	}
+
+	alert(mensaje);
