@@ -1,0 +1,62 @@
+1- 
+
+var mesDelAño = document.getElementById('mes').value;
+
+switch (mesDelAño)
+{
+    case "Enero":
+    alert("que comiences bien el año!!!");
+    break;
+
+    case "Marzo":
+    alert("a clases!!!");
+    break;
+
+    case "Julio":
+    alert("se vienen las vacaciones!!!");
+    break;
+
+    case "Diciembre":
+    alert("felices fiestas!!!");
+    break;
+}
+
+2-
+
+var mesDelAnio = document.getElementById('mes').value;
+
+switch (mesDelAnio)
+{
+    case "Julio":
+    case "Agosto":
+    alert("Abrigrate que hace frío");
+    break;
+
+    case "Septiembre":
+    case "Octubre":
+    case "Noviembre":
+    case "Diciembre":
+    alert("Ya pasamos el frío, ahora calor!!!");
+    break;
+
+    default:
+    alert("Falta para el invierno");
+    break;
+}
+
+3- 
+
+var mesDelAnio = document.getElementById('mes').value;
+
+//alert (mesDelAño);
+	
+switch (mesDelAnio)
+{
+    case "Febrero":
+    alert("Este mes no tiene más de 29 días");
+    break;
+
+    default:
+    alert("Este mes tiene 30 o más días");
+    break;
+}
