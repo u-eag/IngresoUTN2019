@@ -31,3 +31,64 @@
     alert("Clave correcta!");
    
 4-
+	var numero = parseInt(prompt("ingrese un número entre 0 y 10."));
+
+	while (numero < 0 || numero > 10 || isNaN(numero)){
+
+		numero = parseInt(prompt("Número incorrecto. Ingrese un número entre 0 y 10."));
+	}
+
+	document.getElementById("Numero").value = numero;
+
+5-
+    var sexo = prompt("ingrese f ó m .").toLowerCase();
+
+    while (!(sexo == "f" || sexo == "m")){
+    //while (sexo != "f" && sexo != "m"){	
+
+        sexo = prompt("Dato incorrecto. Ingrese f ó m .");
+    }
+
+    document.getElementById("Sexo").value = sexo;
+
+6-
+	var num1 = parseInt(prompt("Ingrese el primer número"));
+	var num2 = parseInt(prompt("Ingrese el segundo número"));
+	var num3 = parseInt(prompt("Ingrese el tercer número"));
+	var num4 = parseInt(prompt("Ingrese el cuarto número"));
+	var num5 = parseInt(prompt("Ingrese el quinto número"));
+
+	var suma;
+	var promedio;
+
+	while (isNaN(num1)){
+
+		num1 = parseInt(prompt("Número Incorrecto. Ingrese el primer número"));
+	}
+	
+	while (isNaN(num2)){
+
+		num2 = parseInt(prompt("Número Incorrecto. Ingrese el segundo número"));
+	}
+
+	while (isNaN(num3)){
+
+		num3 = parseInt(prompt("Número Incorrecto. Ingrese el tercer número"));
+	}
+
+	while (isNaN(num4)){
+
+		num4 = parseInt(prompt("Número Incorrecto. Ingrese el cuarto número"));
+	}
+
+	while (isNaN(num5)){
+
+		num5 = parseInt(prompt("Número Incorrecto. Ingrese el quinto número"));
+	}
+
+	suma = num1 + num2 + num3 + num4 + num5;
+
+	promedio = suma / 5;
+
+	document.getElementById("suma").value = suma;
+	document.getElementById("promedio").value = promedio;
