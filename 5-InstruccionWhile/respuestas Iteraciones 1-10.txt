@@ -53,43 +53,85 @@
     document.getElementById("Sexo").value = sexo;
 
 6-
-	var num1 = parseInt(prompt("Ingrese el primer número"));
-	var num2 = parseInt(prompt("Ingrese el segundo número"));
-	var num3 = parseInt(prompt("Ingrese el tercer número"));
-	var num4 = parseInt(prompt("Ingrese el cuarto número"));
-	var num5 = parseInt(prompt("Ingrese el quinto número"));
+	var contador=0;
+	var acumulador=0;
 
-	var suma;
-	var promedio;
+	var numero;
 
-	while (isNaN(num1)){
+	while (contador < 5){
 
-		num1 = parseInt(prompt("Número Incorrecto. Ingrese el primer número"));
+		numero = parseInt(prompt("Ingrese un número"));
+
+		acumulador = acumulador + numero;
+
+		contador++;
 	}
+
+	document.getElementById('suma').value = acumulador;
+	document.getElementById('promedio').value = acumulador/5;
+
+7-
+	var contador = 0;
+	var acumulador = 0;
+	var respuesta;
+
+	var numero;
+
+	do {
+			
+		numero = parseInt(prompt("Ingrese un número"));
+
+		while (isNaN(numero)){
+
+			numero = parseInt(prompt("Número inválido. Ingrese un número"));
+		}
+
+		acumulador = acumulador + numero;
+
+		contador++;
+
+		respuesta = prompt("¿Desea ingresar un número? si/no").toLowerCase();
+
+	}
+	while (respuesta == "si");
+
+	document.getElementById('suma').value = acumulador;
+	document.getElementById('promedio').value = acumulador / contador;
+
+8-
+	var contador = 0;
+	var positivo = 0;
+	var negativo = 1;
 	
-	while (isNaN(num2)){
+	var respuesta;
 
-		num2 = parseInt(prompt("Número Incorrecto. Ingrese el segundo número"));
-	}
+	var numero;
 
-	while (isNaN(num3)){
+	do {
+		numero = parseInt(prompt("Ingrese un número"));
 
-		num3 = parseInt(prompt("Número Incorrecto. Ingrese el tercer número"));
-	}
+		while (isNaN(numero)){
 
-	while (isNaN(num4)){
+			numero = parseInt(prompt("Ingreso inválido. Por favor ingrese un número"));
+		}
 
-		num4 = parseInt(prompt("Número Incorrecto. Ingrese el cuarto número"));
-	}
+		if (numero >= 0) {
 
-	while (isNaN(num5)){
+			positivo = positivo + numero;
+		}
+		else {
 
-		num5 = parseInt(prompt("Número Incorrecto. Ingrese el quinto número"));
-	}
+			negativo = negativo * numero;
+		}
 
-	suma = num1 + num2 + num3 + num4 + num5;
+		contador++;
 
-	promedio = suma / 5;
+		respuesta = prompt("¿Desea ingresar un número? si/no").toLowerCase();
 
-	document.getElementById("suma").value = suma;
-	document.getElementById("promedio").value = promedio;
+	} while (respuesta == "si");
+
+	document.getElementById('suma').value = positivo;
+	document.getElementById('producto').value = negativo;
+
+9-
+
