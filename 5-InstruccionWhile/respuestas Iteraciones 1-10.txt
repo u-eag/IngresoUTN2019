@@ -107,6 +107,8 @@
 
 	var numero;
 
+	var flag = true;
+
 	do {
 		numero = parseInt(prompt("Ingrese un número"));
 
@@ -116,11 +118,12 @@
 		}
 
 		if (numero >= 0) {
-
+			// positivo += numero;
 			positivo = positivo + numero;
 		}
 		else {
-
+			flag = false;
+			// negativo *= numero;
 			negativo = negativo * numero;
 		}
 
@@ -130,8 +133,55 @@
 
 	} while (respuesta == "si");
 
+	if (flag){
+
+		negativo = 0;
+	}
+
 	document.getElementById('suma').value = positivo;
 	document.getElementById('producto').value = negativo;
 
 9-
+	var respuesta;
+
+	var numero;
+
+	var maximo;
+	var minimo;
+
+	do {
+		numero = parseInt(prompt("Ingrese un número"));
+
+		while (isNaN(numero)){
+
+			numero = parseInt(prompt("Ingreso inválido. Por favor ingrese un número"));
+		}
+
+		if (contador == 0){
+
+			maximo = numero;
+			minimo = numero;
+		}
+		
+		contador++;
+
+		if (maximo < numero){
+
+			maximo = numero;
+		}
+		else if (minimo > numero){
+
+			minimo = numero;
+		}
+
+		respuesta = prompt("¿Desea continuar? si/no").toLowerCase();
+
+	} while (respuesta == "si");
+
+	document.getElementById("maximo").value = maximo;
+	document.getElementById("minimo").value = minimo;
+	
+	// probar con flag en lugar de contador
+
+10-
 
