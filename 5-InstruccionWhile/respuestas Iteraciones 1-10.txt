@@ -9,6 +9,11 @@
 
 		i++;
 	}
+	
+	// versión FOR:
+	for (i=1; i<=10, i++){
+		console.log(i);
+	}
 
 2-
 	var i = 10;
@@ -19,6 +24,12 @@
 
 		i--;
 	}
+	
+	// versión FOR:
+	for (i=10; i>0; i--){
+		console.log(i);
+	}
+		
 
 3-
     var clave = prompt("ingrese el número clave.");
@@ -184,4 +195,64 @@
 	// probar con flag en lugar de contador
 
 10-
+	var numero;
+	var respuesta;
+	
+	var contadorCero = 0;
 
+	var contadorPositivo = 0;
+	var acumuladorPositivo = 0;
+	var promedioPositivo = 0;
+
+	var contadorNegativo = 0;
+	var acumuladorNegativo = 0;
+	var promedioNegativo = 0;
+
+	var contadorPar = 0;
+
+	var diferenciaPyN;
+
+	do{
+		numero = parseInt(prompt("Ingrese un número"));
+
+		while (isNaN(numero)){
+			numero = parseInt(prompt("Ingreso inválido. Ingrese un número"));
+		}
+
+		if (numero == 0){
+			contadorCero++;
+		}
+		else if (numero > 0){
+			contadorPositivo++;
+			acumuladorPositivo += numero;
+		}
+		else {
+			contadorNegativo++;
+			acumuladorNegativo += numero;
+		}
+
+		if (numero % 2 == 0){
+			contadorPar++;
+		}
+
+	}
+	while (respuesta == "si");
+
+	promedioPositivo = acumuladorPositivo / contadorPositivo;
+
+	promedioNegativo = acumuladorNegativo / contadorNegativo;
+
+	diferenciaPyN = acumuladorPositivo - acumuladorNegativo;
+
+	document.write("1. Suma de los negativos: " + acumuladorNegativo + "<br>" + "2. Suma de los positivos: " + acumuladorPositivo + "<br>" + "3. Cantidad de positivos: " + contadorPositivo + "<br>" + "4. Cantidad de negativos: " + contadorNegativo + "<br>" + "5. Cantidad de ceros: " + contadorCero + "<br>" + "6. Cantidad de números pares: " + contadorPar + "<br>" + "7. Promedio de positivos: " + promedioPositivo + "<br>" + "8. Promedio de negativos: " + promedioNegativo + "<br>" + "9. Diferencia entre positivos y negativos: " + diferenciaPyN);
+
+
+
+
+
+
+
+REGLITAS DE ORO:
+- DO WHILE: cuando el código se debe ejecutar por lo menos una vez.
+- FOR: cuando se sabe de antemano la cantidad de repeticiones (se sabe la cantidad de iteraciones en tiempo de compilación).
+- WHILE: para todo el resto (cuando no se sae el número de repeticiones, cuando no es necesario que el código se ejecute una vez, etc.).
