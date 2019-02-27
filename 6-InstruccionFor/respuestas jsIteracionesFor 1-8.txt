@@ -20,3 +20,65 @@
 }
 
 4.
+    for (i = 0; i < 1000; i++){
+        console.log("Hola " + i);
+    
+        if (i == 14){
+            break;
+        }
+
+    }
+    
+5.
+    var numero;
+
+    for ( ; ; ){
+        numero = parseInt(prompt("Ingrese un número"));
+
+        while (isNaN(numero)){
+            numero = parseInt(prompt("Ingreso inválido. Ingrese un número"));
+        }
+
+        if (numero == 9){
+            break;
+        }
+
+        alert(numero);
+
+    }
+
+6.
+    var numero = parseInt(prompt("Ingrese un número"));
+    var contador = 0;
+
+    while (isNaN(numero)){
+        numero = parseInt(prompt("Ingreso inválido. Ingrese un número"));
+    }
+
+    for (i = 1; i <= numero; i++ ){
+            
+        if (i % 2 == 0){
+            contador++;
+            console.log(i);
+        }
+    }
+  
+7.
+    var numero = parseInt(prompt("Ingrese un número"));
+    var contador = 0;
+
+    while (isNaN(numero)){
+        numero = parseInt(prompt("Ingreso inválido. Ingrese un número"));
+    }
+
+    for (i = 1; i <= numero; i++ ){
+            
+        if (numero % i == 0){
+            contador++;
+            console.log(i);
+        }
+    }
+    
+8.
+
+
