@@ -71,3 +71,66 @@ else
 
 	document.write = suma
 }
+
+5.
+
+
+6.
+
+
+7. EJERCICIO DE EXAMEN
+
+/* 7- realizar el algoritmo que permita el ingreso por prompt de las notas (validar entre 0 y 10) y el sexo 
+	(validar el sexo “f”  o “m”)  de 100 alumnos, informar por alert: 
+	a) el promedio de las notas totales. 
+	b) la nota más baja y el sexo. 
+	c) la cantidad de varones que su nota haya sido mayor o igual a  6. */
+
+	var nota;
+	var sexo;
+	
+	var promedio;
+	var notaBaja;
+	var contadorVarones = 0;
+	
+	var acumuladorNota = 0;
+
+	var flag = 0;
+
+	var sexoNotaBaja;
+
+	var cantidad = 100;
+	// uso cantidad = 3 para testear
+
+	for (i = 0; i < cantidad; i++){
+		
+		nota = parseInt(prompt("Ingrese la nota"));
+
+		while (!(nota >= 0 & nota <= 10) || isNaN(nota)){
+			nota = parseInt(prompt("Ingreso inválido. Ingrese la nota"));
+		}
+
+		sexo = prompt("Ingrese sexo").toLowerCase();
+
+		while (!(sexo == "f" || sexo == "m")){
+			sexo = prompt("Ingreso inválido. Ingrese el sexo f/m");
+		}
+
+		acumuladorNota = acumuladorNota + nota;
+
+		if (sexo == "m" && nota >= 6){
+			contadorVarones++;
+		}
+
+		if (nota < notaBaja || flag == 0){
+			notaBaja = nota;
+			sexoNotaBaja = sexo;
+			flag = 1;
+		}
+	}
+
+	promedio = acumuladorNota / cantidad;
+
+	alert("a) El promedio de las notas totales es: " + promedio.toFixed(2) + "\n" + "b) La nota más baja es: " + notaBaja + " y corresponde al sexo: " + sexo + "\n" + "c) La cantidad de varones con nota mayor a 6 es: " + contadorVarones);
+
+8.
