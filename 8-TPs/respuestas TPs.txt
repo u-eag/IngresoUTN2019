@@ -138,7 +138,8 @@ function CentigradosFahrenheit ()
     alert(centigrados + " grados Cent�grados son " + fahrenheit + " Fahrenheit");	
 }
 
-4. FerreteIluminacion
+4. EJERCICIO DE EXAMEN!
+FerreteIluminacion
 
  	var cantidad;
     var marca;
