@@ -134,3 +134,60 @@ else
 	alert("a) El promedio de las notas totales es: " + promedio.toFixed(2) + "\n" + "b) La nota más baja es: " + notaBaja + " y corresponde al sexo: " + sexo + "\n" + "c) La cantidad de varones con nota mayor a 6 es: " + contadorVarones);
 
 8.
+	/* 8- realizar el algoritmo que permita ingresar números positivos (validar que sea positivo) hasta que el 
+	usuario quiera e informar al terminar el ingreso por document.write:  
+	a) la cantidad de números pares. 
+	b) el promedio de todos los números ingresados. 
+	c) la suma de todos los números. 
+	d) El número máximo y el mínimo.  */
+
+	var numero;
+	var seguir;
+	var contadorNumeros = 0;
+
+	var contadorPares = 0;
+	var promedio = 0;
+	var acumuladorSuma = 0;
+	var numeroMaximo;
+	var numeroMinimo;
+	var flag = 0;
+
+	var contadorImpares = 0;
+
+	do{
+
+		numero = parseInt(prompt("Ingrese un número positivo"));
+
+		while (isNaN(numero) || numero < 0){
+			numero = parseInt(prompt("Ingreso inválido. Ingrese un número"));
+		}
+
+		acumuladorSuma += numero;
+
+		if (numero % 2 == 0){
+			contadorPares++;
+		}
+		else {
+			contadorImpares++;
+		}
+
+		if (numero > numeroMaximo || flag == 0){
+			
+			numeroMaximo = numero;
+		}
+		
+		if (numero < numeroMinimo || flag == 0){
+
+			numeroMinimo = numero;
+			flag = 1; 
+		}
+
+		contadorNumeros ++;
+
+		seguir = confirm("¿Desea ingresar otro número?");
+
+	} while (seguir);
+
+	promedio = acumuladorSuma / contadorNumeros;
+
+	document.write("a) La cantidad de números pares es: " + contadorPares + "<br>" + "b) El promedio de todos los números ingresados es: " + promedio.toFixed(2) + "<br>" + "c) La suma de todos los números es: " + acumuladorSuma + "<br>" + "d) El número máximo es: " + numeroMaximo + " y el mínimo es: " + numeroMinimo + "<br>" + "e) La cantidad de números impares es: " + contadorImpares);
