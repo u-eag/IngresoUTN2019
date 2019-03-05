@@ -332,5 +332,70 @@ FerreteIluminacion
 
     alert(mensaje);
 
+4. versión switch 2.0
+
+    var precio = 35;
+    var cantidad;
+    var marca;
+    var precioDescuento;
+
+    var importeFinal;
+    var iibb;
+    flag = false;
+
+    cantidad = parseInt(document.getElementById("Cantidad").value);
+
+    marca = document.getElementById("Marca").value;
+
+    switch (cantidad) {
+
+        case 1:
+        case 2:
+            precioDescuento = precio;
+            break;
+        case 3:
+            if (marca == "ArgentinaLuz") {
+                precioDescuento = precio * 0.85;
+            } else if (marca == "FelipeLamparas") {
+                precioDescuento = precio * 0.9;
+            } else {
+                precioDescuento = precio * 0.95;
+            }
+            break;
+        case 4:
+            if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
+                precioDescuento = precio * 0.75;
+            } else {
+                precioDescuento = precio * 0.8;
+            }
+            break;
+        case 5:
+            if (marca == "ArgentinaLuz") {
+                precioDescuento = precio * 0.6;
+            } else {
+                precioDescuento = precio * 0.7;
+            }
+            break;
+        default:
+            precioDescuento = precio * 0.5;
+    }
+
+    document.getElementById("precioDescuento").value = precioDescuento;
+
+    importeFinal = precioDescuento * cantidad;
+
+    mensaje = "El importe final es $" + importeFinal;
+
+    if (importeFinal > 120) {
+        iibb = importeFinal * 0.1;
+        importeFInal = importeFinal + iibb;
+        flag = true;
+    }
+
+    if (flag){
+        mensaje = mensaje + " IIBB usted pagó $" + iibb;
+    }
+
+    alert (mensaje);
 
 
