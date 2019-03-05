@@ -105,37 +105,33 @@ function Materiales ()
 }
 
 3. FerretePinturas
-
-// la formula para convertir f a c es "(32 F - 32) * 5/9 = 0 C"
-
-// la formula para convertir c a f es "(0 C * 9/5) + 32 = 32 F"
-
 function FahrenheitCentigrados () 
 {
-    // (32 F - 32) * 5/9 = 0 C
+    // la formula para convertir f a c es "(F - 32) * 5/9"
+    
+    var temperatura;
+    var conversion;
+    
+    temperatura = parseFloat(document.getElementById("Temperatura").value);
 
-    var fahrenheit;
-    var centigrados;
+    conversion = (temperatura - 32) * 5/9;
 
-    fahrenheit = parseFloat(document.getElementById("Temperatura").value);
+    alert(temperatura + " grados Fahrenheit son " + conversion + " grados centígrados");
 
-    centigrados = (fahrenheit - 32) * 5/9;
-
-    alert(fahrenheit + " Fahrenheit son " + centigrados + " Cent�grados");
 }
 
 function CentigradosFahrenheit () 
 {
-    // (0 C * 9/5) + 32 = 32 F
+    // la formula para convertir c a f es "(C * 9/5) + 32"
     
-    var centigrados;
-    var fahrenheit;
+    var temperatura;
+    var conversion;
 
-    centigrados = parseFloat(document.getElementById("Temperatura").value);
+    temperatura = parseFloat(document.getElementById("Temperatura").value);
 
-    fahrenheit = (centigrados * 9/5) + 32;
+    conversion = (temperatura * 9/5) + 32;
 
-    alert(centigrados + " grados Cent�grados son " + fahrenheit + " Fahrenheit");	
+    alert(temperatura + " grados centígrados son " + conversion + " Fahrenheit");
 }
 
 4. EJERCICIO DE EXAMEN!
