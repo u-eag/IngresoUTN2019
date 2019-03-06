@@ -341,7 +341,7 @@ FerreteIluminacion
 
     var importeFinal;
     var iibb;
-    flag = false;
+    var flag = false;
 
     cantidad = parseInt(document.getElementById("Cantidad").value);
 
@@ -384,18 +384,16 @@ FerreteIluminacion
 
     importeFinal = precioDescuento * cantidad;
 
-    mensaje = "El importe final es $" + importeFinal;
-
     if (importeFinal > 120) {
         iibb = importeFinal * 0.1;
-        importeFInal = importeFinal + iibb;
+        importeFinal = importeFinal + iibb;
         flag = true;
     }
+
+    mensaje = "El importe final es $" + importeFinal;
 
     if (flag){
         mensaje = mensaje + " IIBB usted pagó $" + iibb;
     }
 
     alert (mensaje);
-
-
